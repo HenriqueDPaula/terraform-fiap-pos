@@ -1,3 +1,5 @@
 # Automate Terraform with GitHub Actions
 
-This repo is a companion repo to the [Automate Terraform with GitHub Actions tutorial](https://developer.hashicorp.com/terraform/tutorials/automation/github-actions).
+Repositório destinado a Infra do Amazon Elastic Kubernetes Service da aplicação Lanchonete (https://github.com/HenriqueDPaula/lanchonete).
+
+Criando um Cluster EKS com Terraform e GitHub Actions
