@@ -1,0 +1,29 @@
+name: Destroy testing workspace
+
+# configure manual trigger
+on:
+  workflow_dispatch:
+
+
+env:
+  TF_CLOUD_ORGANIZATION: "terraform-fiap-pos"
+  TF_API_TOKEN: "${{ secrets.TF_API_TOKEN }}"
+  TF_WORKSPACE: "terraform-github-actions"
+  CONFIG_DIRECTORY: "./"
+
+
+jobs:
+  integration:
+    runs-on: ubuntu-latest
+    name: Cleanup after integration tests
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: terraform destroy
+        uses: dflook/terraform-destroy-workspace@v1
+        with:
+          path: terraform
+          workspace: ${{ github.head_ref }}
+
+
