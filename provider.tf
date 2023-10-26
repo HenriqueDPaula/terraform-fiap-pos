@@ -18,7 +18,7 @@ terraform {
 
   backend "remote" {
     hostname = "app.terraform.io"
-    organization = "CloudQuickLabs"
+    organization = "terraform-fiap-pos"
 
     workspaces {
       name = "terraform-github-actions"
