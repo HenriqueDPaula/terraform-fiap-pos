@@ -17,10 +17,10 @@ resource "aws_iam_role" "eks_master_role" {
 
 resource "aws_iam_role_policy_attachment" "eks_cluster_cluster" {
   policy_arn = "arn:aws:iam::aws:policy/AmazonEKSClusterPolicy"
-  role = aws_iam_role.eks_master_role.name_prefix
+  role = aws_iam_role.eks_master_role.name
 }
 
 resource "aws_iam_role_policy_attachment" "eks_cluster_service" {
   policy_arn = "arn:aws:iam::aws:policy/AmazonEKSServicePolicy"
-  role = aws_iam_role.eks_master_role.name_prefix
+  role = aws_iam_role.eks_master_role.name
 }
