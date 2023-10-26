@@ -3,6 +3,7 @@ resource "aws_eks_cluster" "eks_cluster" {
   name     = var.cluster_name
   role_arn = aws_iam_role.eks_master_role.arn
   version  = var.kubernetes_version
+  aws_instance_type = "t2.micro"
 
   vpc_config {
 
